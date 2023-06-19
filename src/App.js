@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Video, SearchFeed, Channel, Feed, Navbar } from './components';
+import ScrollToTop from './components/ScrollToTop/ScollToTop';
+import './styles.css';
+
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Navbar />
+        <ScrollToTop>
+        <Routes >
+          <Route path='/' element={<Feed />} />
+          <Route path='/video/:id' element={<Video />} />
+          <Route path='/channel/:id' element={<Channel />} />
+          <Route path='/search/:query' element={<SearchFeed />} />
+        </Routes>
+        </ScrollToTop>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

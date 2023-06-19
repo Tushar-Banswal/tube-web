@@ -1,0 +1,34 @@
+export const categories = [
+    {
+        id:1,
+        name:'new'
+    },
+    {
+        id:2,
+        name:'Coding'
+    },
+    {
+        id:3,
+        name:'Cooking'
+    },
+    {
+        id:4,
+        name:'Vlogs'
+    },
+    {
+        id:5,
+        name:'Gaming'
+    },
+    {
+        id:6,
+        name:'React'
+    },
+    {
+        id:7,
+        name:'Travelling'
+    },
+    {
+        id:8,
+        name:'English'
+    }
+]
